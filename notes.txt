@@ -1,0 +1,100 @@
+🔥 Video-1 : Introduction
+
+Node.js is a JavaScript runtime environment that lets you run JavaScript outside the browser.
+Normally, JavaScript runs only inside browsers like Chrome.
+With Node.js, you can run JavaScript on your computer/server to build:
+
+Backend APIs
+Web servers
+Real-time chat apps
+Authentication systems
+File handling
+Databases connections
+Command-line tools
+
+🔥 Video-2 : Node JS Installation
+when ever ypu install node js ,npm will be installed by default ,npm is used to download the packages
+
+🔥 Video-3 : Hello World! Node js
+in js file when you run using node if you try to console log window or alert it'll throw an error
+because we know that node js is server side so client side functanility they have removed 
+Package.json is a configuration file 
+
+🔥 Video-4 : Module in node JS (files Used -index and math.js)
+Here we have done a simple program
+we have a function add that we are calling from diffrent file
+
+// Difference Between export default and export
+
+// 1. export default
+// Used when a file exports only one main thing.
+//math.js
+// export default function add(a, b) {
+//     return a + b;
+// }
+// import
+// import add from "./math.js";
+//you can rename it to anything
+// import add from "./math.js";
+
+// 2. Named export
+// Used when exporting multiple things.
+//math.js
+// export function add(a, b) {
+//     return a + b;
+// }
+// export function sub(a, b) {
+//     return a - b;
+// }
+//import
+// import { add, sub } from "./math.js";
+//Here names must match exactly.
+
+//This is using Js
+
+// function add(a=9,b){
+//     return a+b
+// }
+//diff bw http vs https
+
+
+🔥 Video-5 : File handling in NodeJs (File Used:file.js)
+It mainly deals with the files like creating reading the file
+
+🔥 Video-6 : How Node js works - Architecture  of Node js
+It starts with a client/user who request to the server(currently its Node js)
+now we'll see how node js will handle this request
+First step is event queue
+request will be queuued inside the event queue
+what event the event present inside the event queue will go to event loop
+event loop is nothing but it'll monitor our event queue
+It folllows FIFO
+when we pick the req from the queue it can be of 2 type 1.blocking operation(sync op) 2.non-blocking operation(non-sync op)
+event checks the type os req is its non-blocking it'll excute immedatly and user will get the output
+if its blocking req it'll go near thread pool
+now what is thread pool? its a pool containing threads - its a worker who'll work for you
+this thread will helps you in blocking operations
+each blocking op has a thread 
+once its done it'll give you the desired data
+
+Default thread pool size is 4
+we can increase it depending on Cpu is i have 8core cpu i can have max 8 threads
+we have a os module 
+
+
+
+🔥 Video-7 : Building http server in Node js
+🔥 Video-8 : Handling URL's in Node js
+
+URL-Uniform resource locator 
+https://www.roidon.dev/
+
+here https is a protocol hyper text transport protocol secure
+if its https then req and response is encrypted
+second part is domain(www.roidon.dev.in)this is basically ip address os the server where its running
+it diffucult to remmber the ip address so we purchase the domain and point the ip there
+url is nothing but user friendly name of ip address
+last is / which is path 
+
+🔥 Video-9 : HTTP methods
+🔥 Video-10 : Getting started with Express And Node js
