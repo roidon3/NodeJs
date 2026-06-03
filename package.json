@@ -2,11 +2,10 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "My first Node app",
-
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/roidon3/NodeJs/issues"
   },
-  "homepage": "https://github.com/roidon3/NodeJs#readme"
+  "homepage": "https://github.com/roidon3/NodeJs#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

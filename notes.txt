@@ -83,8 +83,9 @@ we have a os module
 
 
 
-🔥 Video-7 : Building http server in Node js
-🔥 Video-8 : Handling URL's in Node js
+🔥 Video-7 : Building http server in Node js(file - video7.js)
+
+🔥 Video-8 : Handling URL's in NodeJS
 
 URL-Uniform resource locator 
 https://www.roidon.dev/
@@ -96,5 +97,13 @@ it diffucult to remmber the ip address so we purchase the domain and point the i
 url is nothing but user friendly name of ip address
 last is / which is path 
 
+In this video we are using url package npm i url and we are able to parse the url and to diff url and query param
+
 🔥 Video-9 : HTTP methods
-🔥 Video-10 : Getting started with Express And Node js
+Http GET - when u want to get data from the server
+Post - when you want to send and mutate some data in server Eg: filling the forms
+In Node.js (mostly while building APIs with Express.js), PUT and PATCH are HTTP methods used to update data.
+PUT - replace entire resource
+PATCH - Modefies some feilds
+
+🔥 Video-10 : Getting started with Express And Node js(file -video10.js)
