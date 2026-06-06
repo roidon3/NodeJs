@@ -1,8 +1,34 @@
 🔥 Video-11 : How Versioning Works in NodeJS?
+ "express": "^5.2.1"
+1st part ->5 major update -there might be changes that it might break when we update be carefull when u update
+2nd part ->2 Reccomended security/bug fix
+3rd part ->1 minor fixes(optional update)
+what is carrot symbol ?
+this means(5)the first no is locked by default it wont update that only 2nd and 3rd it'll update
+carrot symbol means install all recomended and minor fixes automatically when i do npm install 
+~ - if u use this dont change recommended version change only last version (first 2 wont change only last one will change)
 
-🔥 Video-12 : 
-🔥 Video-13 : 
-🔥 Video-14 : 
+🔥 Video-12 : What is REST API?
+there is server and client(alexa,browser,mobile) 
+req and res will happen as we know 
+1.It'll woek on server client archeture - means both client and server are diffrent entites both should be independent 
+they shouldn't depend on each other
+2.data is JSON format frontend will deicde what to do with data
+3.always respect all http methods 
+we have already made note of this
+
+🔥 Video-13 : Building REST API's using Node and Express.js
+Here our idea is to make REST API -json
+GET /users - List all users
+GET /users/2 - Get the users with a particular idea
+POST /users -create new users
+Patch /users/1 -Edit the user with ID 1
+DELETE /users/1 - Delete the user with ID 1
+Here im using hardcoded data since there is no DB
+🔥 Video-14 : Introduction to POSTMAN for REST API's
+Postman is the tool used for API testing and documentation
+
+
 🔥 Video-15 : 
 🔥 Video-16 : 
 🔥 Video-17 : 
