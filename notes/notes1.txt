@@ -36,6 +36,20 @@ req->middleware->res (this is the steps,we can have multiple middlewares also)
 🔥 Video-16 : What are HTTP Headers in API
 Here we jusyt created a custom header (res.setHeader("x-myname","roidon"))
 🔥 Video-17 : HTTP Status Codes
-🔥 Video-18 : 
+🔥 Video-18 : Getting Started with MongoDB
+MongoDB NO sql document database
+strong suppport for aggretion pipes
+works on bison format
+Best for Node applications
+In sql we have tables but in mongodb we have collections
+Inside collections we have documents
+Mongodb commands
+show dbs - shows the DB
+use <db_name> to use a particular DB
+show collections 
+db.coll.find 
+db.coll.insert
+
+
 🔥 Video-19 : 
 🔥 Video-20 : 
