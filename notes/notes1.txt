@@ -17,7 +17,7 @@ they shouldn't depend on each other
 3.always respect all http methods 
 we have already made note of this
 
-🔥 Video-13 : Building REST API's using Node and Express.js
+🔥 Video-13 : Building REST API's using Node and Express.js (file -video13.js)
 Here our idea is to make REST API -json
 GET /users - List all users
 GET /users/2 - Get the users with a particular idea
@@ -25,13 +25,17 @@ POST /users -create new users
 Patch /users/1 -Edit the user with ID 1
 DELETE /users/1 - Delete the user with ID 1
 Here im using hardcoded data since there is no DB
-🔥 Video-14 : Introduction to POSTMAN for REST API's
+🔥 Video-14 : Introduction to POSTMAN for REST API's  (file -video13.js)
 Postman is the tool used for API testing and documentation
 
 
-🔥 Video-15 : 
-🔥 Video-16 : 
-🔥 Video-17 : 
+🔥 Video-15 : Express Middleware  (file -video13.js)
+Middleware is between the req and res it validates the incomming req. The req has to go through the middleware
+req->middleware->res (this is the steps,we can have multiple middlewares also)
+
+🔥 Video-16 : What are HTTP Headers in API
+Here we jusyt created a custom header (res.setHeader("x-myname","roidon"))
+🔥 Video-17 : HTTP Status Codes
 🔥 Video-18 : 
 🔥 Video-19 : 
 🔥 Video-20 : 
