@@ -50,6 +50,7 @@ show collections
 db.coll.find 
 db.coll.insert
 
+🔥 Video-19 : Connecting NodeJS with MongoDB | Mongoose + Express
+Till now we used to use MOCK_DATA.json file as DB
 
-🔥 Video-19 : 
 🔥 Video-20 : 

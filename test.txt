@@ -1,1 +1,3 @@
-I'm roidon who will crack something big next yearSuccessfull person
+Schema - Define the structure
+schema - model
+using modal we do crud operations
