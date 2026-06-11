@@ -50,7 +50,27 @@ show collections
 db.coll.find 
 db.coll.insert
 
-🔥 Video-19 : Connecting NodeJS with MongoDB | Mongoose + Express
+🔥 Video-19 : Connecting NodeJS with MongoDB | Mongoose + Express(file : video14.js)
 Till now we used to use MOCK_DATA.json file as DB
+
+I run the command in cmd(first run mongosh)
+
+1. test> show dbs
+admin           40.00 KiB
+config         108.00 KiB
+ecommerce        8.00 KiB
+firstDB         72.00 KiB
+local           40.00 KiB
+youtube-app-1   12.00 KiB
+test>
+
+2. test> use youtube-app-1
+switched to db youtube-app-1
+youtube-app-1>
+
+3.youtube-app-1> show collections
+users
+youtube-app-1>
+after you post the data run the find command you'll see the data(db.users.find({}))
 
 🔥 Video-20 : 

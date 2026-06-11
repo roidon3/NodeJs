@@ -2,22 +2,7 @@ const express = require("express");
 const users = require("./MOCK_DATA.json")
 const app = express()
 const fs = require("fs")
-const mongoose = require("mongoose");
 const { type } = require("os");
-//make connection to DB
-mongoose.connect("")
-//first we need to do the schema
-const userSchema = new mongoose.Schema({
-    first_name:{
-        type:String,required:true,
-    },
-    last_name:{type:String,required:false},
-    email:{type:String,required:false,unique:true},
-    job_title:{type:String},
-    gender:{type:String},
-})
-//now make a modal
-const User=mongoose.model('user',userSchema)
 //middleware
 //this is the first middleware
 app.use(express.urlencoded({ extended: false }));//This middleware is used to read form data sent from the client. else we'll get undefined
