@@ -75,3 +75,27 @@ after you post the data run the find command you'll see the data(db.users.find({
 
 🔥 Video-20 : Model View Controller in NodeJS | MVC Pattern
 Controller manuplates the model and model updates the View
+Here we refactored the code by creating multiple files
+1.connection.js - where we connect mongoDB to express
+2.middleware/index.js-as of now i have written middlewares inside video14.js file
+3.Routes -it decides Which controller should handle this URL?
+4.controller - it has business logic
+5.model -it defines the data structure
+Responsibilities: Schema,Validation,Database operation
+6.view-as of now no view 
+current project structure 
+
+video14.js
+│
+├── connection.js
+│
+├── routes
+│   └── user.js
+│
+├── controllers
+│   └── user.js
+│
+├── models
+│   └── user.js
+│
+└── MongoDB
