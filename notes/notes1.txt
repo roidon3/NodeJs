@@ -73,4 +73,5 @@ users
 youtube-app-1>
 after you post the data run the find command you'll see the data(db.users.find({}))
 
-🔥 Video-20 : 
+🔥 Video-20 : Model View Controller in NodeJS | MVC Pattern
+Controller manuplates the model and model updates the View
