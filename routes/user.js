@@ -23,4 +23,5 @@ router.delete("/:id", deteleUser)
 
 //5.PATCH 
 router.patch("/:id", updateUser)
+
 module.exports = router;
