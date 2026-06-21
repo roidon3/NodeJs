@@ -1,7 +1,7 @@
-🔥 Video-20 : Create a Custom URL Shortener using Node.JS and MongoDB
-🔥 Video-21 : 
-🔥 Video-22 : 
-🔥 Video-23 : 
+🔥 Video-21 : Create a Custom URL Shortener using Node.JS and MongoDB
+🔥 Video-22 : Server Side Rendering with EJS and Node.JS
+here our intention is to make ssr in res.send() here we send the html which will directly render in browser
+🔥 Video-23 : Building Node.js Authentication from Scratch
 🔥 Video-24 : 
 🔥 Video-25 : 
 🔥 Video-26 : 
