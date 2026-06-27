@@ -1,15 +1,21 @@
 const express = require("express");
 const URL = require("./models/url");
 const path=require("path")
+const cookieParser= require("cookie-parser")
 const app = express();
-const urlroute = require("./routes/url")
-const { connectMongoDB } = require("./connect")
 app.use(express.json()); // <-- add this
+const urlroute = require("./routes/url")
+//THis is for user route
+const userRoute = require("./routes/user")
+app.use("/user",userRoute)
+const { connectMongoDB } = require("./connect")
+
 app.set("view engine","ejs")
 app.set("views",path.resolve("./views"))
 //connection
 connectMongoDB("mongodb://127.0.0.1:27017/short-url").then(() => console.log("connection is successfull"));
 app.use("/url", urlroute)
+app.use(cookieParser())
 
 app.get("/test",async(req,res)=>{
     let info =await URL.find({})

@@ -2,6 +2,14 @@
 🔥 Video-22 : Server Side Rendering with EJS and Node.JS
 here our intention is to make ssr in res.send() here we send the html which will directly render in browser
 🔥 Video-23 : Building Node.js Authentication from Scratch
+
+Authentication patterns
+1.statefull - which maintains state or data or server side
+2.stateless - which has no state
+statefull - when a req is send from the client server sends a uid ,next time whenever we request we need to send this uid
+Uid you can get in many ways either response,cookies or headers
+to make authorization we need a collections - model - make a collection
+
 🔥 Video-24 : 
 🔥 Video-25 : 
 🔥 Video-26 : 
