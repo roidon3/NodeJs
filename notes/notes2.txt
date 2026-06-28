@@ -10,9 +10,54 @@ statefull - when a req is send from the client server sends a uid ,next time whe
 Uid you can get in many ways either response,cookies or headers
 to make authorization we need a collections - model - make a collection
 
-🔥 Video-24 : 
-🔥 Video-25 : 
-🔥 Video-26 : 
+🔥 Video-24 : JWT Authentication in NodeJS
+this is stateless auth here we use JWT
+npm i jsonwebtoken
+🔥 Video-25 : What are Cookies in NodeJS?
+user make a req to db ,server makes a token
+there is 2 ways to give this token to user 
+1.cookies 2.response
+so bascilly this si thje flow of cookies
+LOGIN
+React
+ |
+ | email/password
+ ↓
+Node
+verify user
+create JWT
+JWT
+ |
+ ↓
+Cookie
+ |
+ ↓
+Browser stores
+---------------------
+PROFILE REQUEST
+React
+GET /profile
+Browser automatically adds:
+Cookie: token=jwt
+
+        ↓
+
+Node middleware
+
+jwt.verify()
+
+        ↓
+
+req.user
+
+        ↓
+
+send response
+disadvantages of cookies it its only restricted to browser ,we cannot use in mobile app
+2.response- using bearer token 408
+here in response we'll send the token and in headers we'll send this and in backend we'll get this
+
+🔥 Video-26 : Authorization in NodeJS
 🔥 Video-27 : 
 🔥 Video-28 : 
 🔥 Video-29 : 
