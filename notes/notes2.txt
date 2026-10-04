@@ -58,7 +58,8 @@ disadvantages of cookies it its only restricted to browser ,we cannot use in mob
 here in response we'll send the token and in headers we'll send this and in backend we'll get this
 
 🔥 Video-26 : Authorization in NodeJS
-🔥 Video-27 : 
+🔥 Video-27 : Creating Discord Bot in NodeJS
+
 🔥 Video-28 : 
 🔥 Video-29 : 
 🔥 Video-30 : 

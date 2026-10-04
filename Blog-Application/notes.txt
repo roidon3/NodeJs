@@ -1,0 +1,25 @@
+we have installed express and ejs (npm i)
+here we cannot do like port = 8000
+because we are deploying this app so the person who is using this app his system 8000 port is already on use
+
+here if we have more ejs file we cannot add script tag in all the files this is not good coding practice
+so we use partials inside view folder
+
+
+//Technical part starts
+npm i mongoose
+we have made models,routes,views and controller folder
+inside models we have a file user.js there we have given a schema
+we have made 
+model , route and service folder staruture with index and connection.js file
+in 29 video we have done login and signup using ejs 
+in video 30 - Setting up Authentication - NodeJS Blogging Application with MongoDB
+npm install jsonwebtoken
+
+
+Things to implement
+1.middleware helmet etc
+2.crud
+3.how to optimize api
+4.restricted user resturamnt ex only he can change his details
+5.cors how we add it 
