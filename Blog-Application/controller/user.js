@@ -1,21 +1,34 @@
 const User = require("../models/user");
 const { createHmac, timingSafeEqual } = require("crypto");
+const { createWebToken } = require("../services/authentication");
 
 async function handleUserSignup(req, res) {
-    const { userName, email, password } = req.body;
+    try {
+        const { userName, email, password } = req.body;
 
-    await User.create({
-        userName,
-        email,
-        password
-    });
+        if (!userName || !email || !password) {
+            return res.status(400).send("All fields are required.");
+        }
 
-    return res.redirect("/user/signin");
+        await User.create({ userName, email, password });
+
+        return res.redirect("/user/signin");
+    } catch (error) {
+        //here we are testing whether email is duplicate or not
+        if (error.code === 11000) {
+            return res.status(409).send("Email already exists.");
+        }
+
+        console.error(error);
+        return res.status(500).send("Something went wrong.");
+    }
 }
 
 async function handleUserSignin(req, res) {
     const { email, password } = req.body;
+
     const user = await User.findOne({ email });
+
     if (!user) {
         return res.status(401).send("Invalid email or password");
     }
@@ -33,7 +46,11 @@ async function handleUserSignin(req, res) {
         return res.status(401).send("Invalid email or password");
     }
 
-    return res.redirect("/");
+    const token = createWebToken(user);
+
+    console.log(token, "token");
+
+    return res.cookie("token", token).redirect("/");
 }
 
 module.exports = {

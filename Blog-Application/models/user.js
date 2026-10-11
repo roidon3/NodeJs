@@ -9,6 +9,7 @@ const userSchema = new Schema(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     salt: {
       type: String,
@@ -36,9 +37,7 @@ userSchema.pre("save", async function () {
     if (!user.isModified("password")) {
         return;
     }
-
     const salt = randomBytes(16).toString("hex");
-
     const hashedPassword = createHmac("sha256", salt)
         .update(user.password)
         .digest("hex");
@@ -50,3 +49,9 @@ userSchema.pre("save", async function () {
 const User = model("user", userSchema);
 
 module.exports = User;
+
+// Hashing: Transforms a password into a one-way value.
+// Salt: A random, per-password value that makes identical passwords produce different hashes.
+// Why store the salt? So we can recompute the hash during signin.
+// Does the salt need to be secret? No.
+// Does the salt replace password hashing? No — it's used alongside the hashing algorithm.

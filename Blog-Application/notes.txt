@@ -16,6 +16,29 @@ in 29 video we have done login and signup using ejs
 in video 30 - Setting up Authentication - NodeJS Blogging Application with MongoDB
 npm install jsonwebtoken
 
+currently we have:
+POST /user/signin
+       ↓
+handleUserSignin()
+       ↓
+check email + password
+       ↓
+redirect("/")
+
+we have to implement:
+POST /user/signin
+       ↓
+handleUserSignin()
+       ↓
+check email + password
+       ↓
+createWebToken(user)
+       ↓
+send JWT to browser
+       ↓
+redirect("/")
+
+till 17:00 Authintication
 
 Things to implement
 1.middleware helmet etc
@@ -23,3 +46,9 @@ Things to implement
 3.how to optimize api
 4.restricted user resturamnt ex only he can change his details
 5.cors how we add it 
+6.login flow where to store jwt and cookies
+7.if login show signup button ,is logout show sign in button how you do this?
+8.4. Stateful authentication — Sessions
+9.caching
+10.how refresh token works
+11. how we send the token stored in cookies to underytsand the same person has send the request ,if diff person sends waht will happen?
