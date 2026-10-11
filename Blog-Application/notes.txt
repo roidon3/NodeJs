@@ -50,5 +50,5 @@ Things to implement
 7.if login show signup button ,is logout show sign in button how you do this?
 8.4. Stateful authentication — Sessions
 9.caching
-10.how refresh token works
+10.how refresh token works ,expire token
 11. how we send the token stored in cookies to underytsand the same person has send the request ,if diff person sends waht will happen?
