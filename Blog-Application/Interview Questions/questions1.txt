@@ -1,0 +1,7 @@
+1.how you measure the api performance
+2.diff bw put patch
+3.diff http methods
+3.status codes
+4.idompotency
+5.authentication and authorization
+7.what are middlewares?custom and in built middlewares
