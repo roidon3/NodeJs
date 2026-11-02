@@ -1,11 +1,39 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head') %>
-    <title>Blog Application</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify - Home</title>
+</head>
+<body>
+    <h1>Welcome to Blogify!</h1>
 
-  <body>
-    <%- include('./partials/nav') %> <%- include('./partials/script') %>
-  </body>
+    <a href="/blog/create">Write a Blog</a>
+
+    <hr />
+
+    <h2>All Blogs</h2>
+
+    <% if (blogs.length === 0) { %>
+        <p>No blogs have been published yet.</p>
+    <% } %>
+
+    <% blogs.forEach((blog) => { %>
+        <article>
+            <h3><%= blog.title %></h3>
+            <p><%= blog.body %></p>
+
+            <small>
+                Written by:
+                <%= blog.createdBy ? blog.createdBy.userName : "Unknown author" %>
+            </small>
+
+            <hr />
+        </article>
+    <% }) %>
+    <form action="/user/logout" method="POST">
+    <button type="submit">Logout</button>
+</form>
+</body>
 </html>

@@ -1,7 +1,11 @@
-1.how you measure the api performance
+1.what is node js?
+2.how you measure the api performance
 2.diff bw put patch
 3.diff http methods
 3.status codes
 4.idompotency
 5.authentication and authorization
 7.what are middlewares?custom and in built middlewares
+8. REST Api's
+9.Graphql
+10.cors11.how to protect the API's

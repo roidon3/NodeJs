@@ -1,0 +1,42 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog | Blogify</title>
+</head>
+<body>
+    <h1>Create a Blog</h1>
+
+    <form action="/blog/create" method="POST">
+        <div>
+            <label for="title">Blog Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter your blog title"
+                required
+            />
+        </div>
+
+        <br />
+
+        <div>
+            <label for="body">Blog Content</label>
+            <textarea
+                id="body"
+                name="body"
+                placeholder="Write your blog here..."
+                rows="10"
+                required
+            ></textarea>
+        </div>
+
+        <br />
+
+        <button type="submit">Publish Blog</button>
+    </form>
+</body>
+</html>

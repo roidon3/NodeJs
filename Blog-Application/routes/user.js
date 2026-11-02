@@ -3,7 +3,8 @@ const router = Router();
 
 const {
     handleUserSignup,
-    handleUserSignin
+    handleUserSignin,
+    handleUserLogout
 } = require("../controller/user");
 
 router.get("/signin", (req, res) => {
@@ -17,5 +18,6 @@ router.get("/signup", (req, res) => {
 });
 
 router.post("/signup", handleUserSignup);
+router.post("/logout", handleUserLogout);
 
 module.exports = router;

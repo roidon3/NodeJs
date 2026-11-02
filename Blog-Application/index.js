@@ -6,6 +6,8 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 const userRoute = require("./routes/user");
+const blogRoute = require("./routes/blog");
+const { handleGetAllBlogs } = require("./controller/blog");
 const { connectToMongoDB } = require("./connection");
 
 const PORT = 8000;
@@ -19,11 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 app.use(cookieParser());
-app.get("/", (req, res) => {
-    return res.render("home");
-});
+app.get("/", handleGetAllBlogs);
 
 app.use("/user", userRoute);
+app.use("/blog", blogRoute);
 
 async function startServer() {
     try {
