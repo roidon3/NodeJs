@@ -53,3 +53,16 @@ Things to implement
 10.how refresh token works ,expire token
 11. how we send the token stored in cookies to underytsand the same person has send the request ,if diff person sends waht will happen?
 12.edit and delete the blog only he has done
+
+//Deployment
+To deploy we need cloud services
+Earlier Heroku was free now its paid beacuse it's accquired by salesforce
+Railway is free 
+but we use AWS
+few imp points-
+in our code we have hardcoded the port 8000 ,when we deploy we cammot do thiscause another application might be using same port in cloud
+so the solution is env file and to make this PORT dynamic
+now we have made changes in port number and mongo connectionmake sure in package.json we have start script
+ beacuse cloud will rum npm start using that script
+ another specification of aws is rename index.js file to app.js
+ do npm install dotenv

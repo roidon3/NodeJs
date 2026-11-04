@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const helmet = require("helmet");
 const path = require("path");
@@ -10,7 +11,7 @@ const blogRoute = require("./routes/blog");
 const { handleGetAllBlogs } = require("./controller/blog");
 const { connectToMongoDB } = require("./connection");
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
@@ -28,7 +29,12 @@ app.use("/blog", blogRoute);
 
 async function startServer() {
     try {
-        await connectToMongoDB("mongodb://127.0.0.1:27017/blogify");
+        const mongoUrl = process.env.MONGO_URL;
+        if (!mongoUrl) {
+            throw new Error("MONGO_URL is not set in the environment");
+        }
+
+        await connectToMongoDB(mongoUrl);
         console.log("MongoDB is connected");
         app.listen(PORT, () => {
             console.log(`App is running successfully on port: ${PORT}`);

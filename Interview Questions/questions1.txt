@@ -9,3 +9,5 @@
 8. REST Api's
 9.Graphql
 10.cors11.how to protect the API's
+11.what is env and env.local what will be present in that and why its used 
+12.package.json vs package.lock.json 
